@@ -26,8 +26,8 @@ const mounted = useMounted()
       lg="bottom-0 left-1/3"
     >
       <NuxtImg
-        width="400"
-        height="225"
+        width="auto"
+        height="auto"
         format="webp"
         :src="`/tmdb${item.backdrop_path}`"
         :alt="item.title || item.name"
