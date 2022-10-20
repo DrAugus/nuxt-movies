@@ -7,8 +7,11 @@
       <a href="https://v3.nuxtjs.org/" target="_blank" title="Nuxt 3">
         <IconNuxt3 h6 />
       </a>
+      <div op50 text-sm>
+        and
+      </div>
       <img src="/movies-sm.webp" width="25" height="25" alt="Logo">
-      <div text-l>
+      <div op50 text-sm>
         Nuxt Movies
       </div>
     </div>
