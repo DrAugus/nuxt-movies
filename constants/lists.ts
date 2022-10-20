@@ -14,3 +14,12 @@ export const QUERY_LIST = {
     { type: 'tv', title: 'TV Shows Airing Today', query: 'airing_today' },
   ]),
 }
+
+export const QUERY_MARVEL_LIST = {
+  movie: <QueryItem[]>([
+    { type: 'movie', title: 'Marvel Movies', query: 'marvel studio' },
+  ]),
+  tv: <QueryItem[]>([
+    { type: 'tv', title: 'Marvel TV Shows', query: 'marvel studio' },
+  ]),
+}

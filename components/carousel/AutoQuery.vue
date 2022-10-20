@@ -5,7 +5,8 @@ const { query } = defineProps<{
   query: QueryItem
 }>()
 
-const item = await listMedia(query.type, query.query, 1)
+// const item = await listMedia(query.type, query.query, 1)
+const item = await listMarvelMedia(query.type, query.query, 1)
 </script>
 
 <template>

@@ -37,6 +37,10 @@ export function listMedia(type: MediaType, query: string, page: number): Promise
   return fetchTMDB(`${type}/${query}`, { page })
 }
 
+export function listMarvelMedia(type: MediaType, query: string, page: number): Promise<PageResult<Media>> {
+  return fetchTMDB(`search/multi`, { query, page })
+}
+
 export function getMedia(type: MediaType, id: string): Promise<Media> {
   return fetchTMDB(`${type}/${id}`, {
     append_to_response: 'videos,credits,images,external_ids,release_dates',

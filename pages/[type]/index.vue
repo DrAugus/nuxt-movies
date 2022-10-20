@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MediaType } from '~/types'
-import { QUERY_LIST } from '~/constants/lists'
+import { QUERY_LIST, QUERY_MARVEL_LIST } from '~/constants/lists'
 
 definePageMeta({
   key: route => route.fullPath,
@@ -16,14 +16,14 @@ useHead({
   title: type === 'movie' ? 'Movies' : 'TV Shows',
 })
 
-const queries = $computed(() => QUERY_LIST[type as MediaType])
+const queries = $computed(() => QUERY_MARVEL_LIST[type as MediaType])
 
 const AsyncWrapper = defineComponent(async (_, ctx) => {
   if (!queries)
     return throwError('404')
 
-  const list = await listMedia(type, queries?.[0].query, 1)
-  if (!list)
+  const list = await listMarvelMedia(type, queries?.[0].query, 1)
+  if (!list || !list.results.length)
     return () => {}
   const item = await getMedia(type, list.results?.[0].id)
   return () => ctx.slots?.default?.({ item })
