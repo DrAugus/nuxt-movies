@@ -1,11 +1,5 @@
 <template>
   <footer p="y15 x15" flex="~ col gap4">
-    <div flex="~ row gap2" items-center my2>
-      <img src="/movies-sm.webp" width="25" height="25" alt="Logo">
-      <div text-xl>
-        Nuxt Movies
-      </div>
-    </div>
     <div flex="~ row gap2" items-center>
       <div op50 text-sm>
         Made with
@@ -13,6 +7,10 @@
       <a href="https://v3.nuxtjs.org/" target="_blank" title="Nuxt 3">
         <IconNuxt3 h6 />
       </a>
+      <img src="/movies-sm.webp" width="25" height="25" alt="Logo">
+      <div text-l>
+        Nuxt Movies
+      </div>
     </div>
     <div flex="~ row gap2" items-center>
       <p text-true-gray:90 text-sm>
@@ -30,8 +28,9 @@
     <div>
       <ExternalLinks
         :links="{
-          twitter_id: 'nuxt_js',
-          github_id: 'nuxt/movies',
+          // twitter_id: 'nuxt_js',
+          homepage: 'https://draugus.github.io',
+          github_id: 'DrAugus/nuxt-movies',
         }"
       >
         <a href="https://vercel.com" rel="noopener" target="_blank" aria-label="go to vercel">
